@@ -663,7 +663,7 @@ private actOnSlavesIfMaster(action) {
 }
 
 private refreshSlavesStatusIfMaster() {
-  actOnSlavesIfMaster(parent.&refreshStatus)
+  actOnSlavesIfMaster({ slaveIds -> parent.refreshStatus(slaveIds) })
 }
 
 private updateSlavesplayPauseIfMaster(playPause) {
